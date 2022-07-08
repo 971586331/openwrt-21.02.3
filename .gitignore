@@ -30,3 +30,5 @@ git-src
 .ccache
 .vscode
 .github
+dl/linux-5.4.188.tar.xz
+dl/linux-firmware-20211216.tar.xz
