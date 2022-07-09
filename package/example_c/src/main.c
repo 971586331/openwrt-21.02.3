@@ -7,7 +7,11 @@
 
 int main(int argc, char **argv)
 {
-    printf("run example_c!!!\n");
+    while (1)
+    {
+        printf("run example_c!!!\n");
+        sleep(1);
+    }
 
     return 0;
 }

@@ -1,0 +1,23 @@
+#!/bin/sh /etc/rc.common
+# example_c script
+# Copyright (C) zhangyz OpenWrt.org
+
+START=99
+STOP=99
+
+start() {
+	echo "start example_c!"
+	example_c
+}
+
+stop() {
+	echo "stop example_c!"
+	#example_c -t
+}
+
+EXTRA_COMMANDS="custom"
+EXTRA_HELP=" custom Help for the custom command"
+
+custom() {
+	echo "custom command"
+}

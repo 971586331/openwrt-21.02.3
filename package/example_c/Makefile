@@ -86,6 +86,10 @@ endef
 define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/bin/
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/$(PKG_NAME) 	$(1)/usr/bin/
+
+	# $(INSTALL_DIR) $(1)/etc/init.d/
+	# $(INSTALL_BIN) ./files/example_c.init $(1)/etc/init.d/example_c
+
 	# $(CP) $(PKG_BUILD_DIR)/$(PKG_NAME) $(TOPDIR)
 endef
 
