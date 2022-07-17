@@ -4,20 +4,18 @@
 
 START=99
 STOP=99
+USE_PROCD=1
+PROG=/usr/bin/example_c
 
-start() {
+start_service() {
 	echo "start example_c!"
-	example_c
+	procd_open_instance
+	procd_set_param respawn 600 2 100 
+	procd_set_param command "$PROG"
+	procd_close_instance
 }
 
-stop() {
+stop_service() {
 	echo "stop example_c!"
-	#example_c -t
-}
-
-EXTRA_COMMANDS="custom"
-EXTRA_HELP=" custom Help for the custom command"
-
-custom() {
-	echo "custom command"
+	service_stop "$PROG"
 }
